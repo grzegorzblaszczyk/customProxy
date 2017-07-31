@@ -65,7 +65,7 @@ public class SimpleServlet extends HttpServlet {
 	}
 	
 	String extractContentType(CloseableHttpResponse response) {
-		return StringUtils.replace(response.getEntity().getContentType().getValue(), CHARSET_UNDEFINED, CHARSET_UTF_8);
+		return response.getEntity().getContentType().getValue();
 	}
 
 }
